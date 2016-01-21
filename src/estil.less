@@ -1,0 +1,105 @@
+.boto {
+    background-color: #44ff66;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 10px;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    margin: 30px auto;
+    text-align: center;
+    transition: all 0.1s linear;
+    transition-delay: 0.5s;
+    transform: scale(1);
+    position: relative;
+    overflow: hidden;
+    &:hover {
+        transform: scale(1.2);
+        transition: all 0.1s linear;
+        transition-delay: 0.1s;
+    }
+}
+.boto:after{ 
+        content: "";
+        display: block;
+        width: 50px;
+        height: 170px;
+        background-color: red;
+        position: absolute;
+        top: -55px;
+        left: -80px;
+        transform: rotate(30deg);
+        transition: all 0s linear;
+        background: -moz-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.25) 15%, rgba(30, 87, 153, 0.38) 20%, rgba(32, 95, 164, 0.5) 25%, rgba(41, 137, 216, 0.5) 50%, rgba(33, 99, 168, 0.5) 73%, rgba(30, 87, 153, 0.35) 80%, rgba(30, 87, 153, 0.25) 85%, rgba(30, 87, 153, 0) 100%);
+        background: -webkit-linear-gradient(left, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.25) 15%, rgba(30, 87, 153, 0.38) 20%, rgba(32, 95, 164, 0.5) 25%, rgba(41, 137, 216, 0.5) 50%, rgba(33, 99, 168, 0.5) 73%, rgba(30, 87, 153, 0.35) 80%, rgba(30, 87, 153, 0.25) 85%, rgba(30, 87, 153, 0) 100%);
+        background: linear-gradient(to right, rgba(30, 87, 153, 0) 0%, rgba(30, 87, 153, 0.25) 15%, rgba(30, 87, 153, 0.38) 20%, rgba(32, 95, 164, 0.5) 25%, rgba(41, 137, 216, 0.5) 50%, rgba(33, 99, 168, 0.5) 73%, rgba(30, 87, 153, 0.35) 80%, rgba(30, 87, 153, 0.25) 85%, rgba(30, 87, 153, 0) 100%);
+        //filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#001e5799', endColorstr='#001e5799', GradientType=1);
+}
+.boto:hover:after {
+        left: 250px;
+        transition-delay: 1.3s;
+        transition: all 1s linear;
+}
+
+
+@temps: 0.1s;
+.delay ( @comptador ) {
+    transition-delay: @temps * @comptador;
+}
+
+.contenidor_boles {
+    height: 80px;
+    i {
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: red;
+        border: 1px solid black;
+        float: left;
+        margin-left: 10px;
+        transition: all 0.5s linear;
+    }
+    &:hover i {
+        transform: translateY(40px);
+    }
+    :nth-child(1) {
+        .delay(1);
+    }
+    :nth-child(2) {
+        .delay(2);
+    }
+    :nth-child(3) {
+        .delay(3);
+    }
+    :nth-child(4) {
+        .delay(4);
+    }
+    :nth-child(5) {
+        .delay(5);
+    }
+    :nth-child(6) {
+        .delay(6);
+    }    
+}
+.contenidor_boles:hover {
+        :nth-child(1) {
+            .delay(6);
+        }
+        :nth-child(2) {
+            .delay(5);
+        }
+        :nth-child(3) {
+            .delay(4);
+        }
+        :nth-child(4) {
+            .delay(3);
+        }
+        :nth-child(5) {
+            .delay(2);
+        }
+        :nth-child(6) {
+            .delay(1);
+        }
+}
+ 
